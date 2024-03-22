@@ -1,0 +1,405 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./images/bg.jpg") no-repeat center/cover;
+}
+.container .form-box {
+  width: 980px;
+  height: 560px;
+  display: flex;
+  background-color: #F5F7FA;
+}
+.container .form-box .sidebar {
+  width: 230px;
+  background-color: #292D32;
+  padding: 30px;
+}
+.container .form-box .sidebar .progress ul.progress-steps li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: not-allowed;
+}
+.container .form-box .sidebar .progress ul.progress-steps li.active, .container .form-box .sidebar .progress ul.progress-steps li.done {
+  cursor: pointer;
+}
+.container .form-box .sidebar .progress ul.progress-steps li > span {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4D545A;
+  color: #FFFFFF;
+}
+.container .form-box .sidebar .progress ul.progress-steps li > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #626C76;
+}
+.container .form-box .sidebar .progress ul.progress-steps li.active > span {
+  background-color: #53D56C;
+}
+.container .form-box .sidebar .progress ul.progress-steps li.active > p {
+  color: #53D56C;
+}
+.container .form-box .sidebar .progress ul.progress-steps li.done > span {
+  background-color: #6C70DC;
+}
+.container .form-box .sidebar .progress ul.progress-steps li.done > p {
+  color: #FFFFFF;
+}
+.container .form-box .content {
+  flex: 1;
+}
+.container .form-box .content .data-1,
+.container .form-box .content .data-2,
+.container .form-box .content .data-3,
+.container .form-box .content .data-4 {
+  height: 88%;
+}
+.container .form-box .content .content-step {
+  display: none;
+}
+.container .form-box .content .content-step.active {
+  display: block;
+}
+.container .form-box .content .c-header {
+  height: 10%;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E3EAF3;
+}
+.container .form-box .content .c-header h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.container .form-box .content .c-body {
+  height: 90%;
+  padding: 25px;
+  opacity: 0;
+  animation: fadeInAnimation 0.8s forwards;
+}
+.container .form-box .content .c-body.fadeIn {
+  animation: none;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container .form-box .content .c-body ul {
+  width: 100%;
+}
+.container .form-box .content .c-body ul li {
+  width: 100%;
+  height: 80px;
+  background-color: #FFFFFF;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.0509803922);
+}
+.container .form-box .content .c-body ul li.done {
+  border: 2px solid #53D56C;
+}
+.container .form-box .content .c-body ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.container .form-box .content .c-body ul li img {
+  width: 50px;
+  height: 50px;
+  margin-right: 25px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .form-box .content .c-body ul li .about {
+  margin-right: auto;
+}
+.container .form-box .content .c-body ul li .about h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #292D32;
+}
+.container .form-box .content .c-body ul li .about p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #828F9A;
+}
+.container .form-box .content .c-body ul li span {
+  color: #4FBF65;
+  font-size: 26px;
+  font-weight: 500;
+}
+.container .form-box .content .c-body .date-time {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .form-box .content .c-body .date-time .date {
+  width: 55%;
+}
+.container .form-box .content .c-body .date-time .date .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.container .form-box .content .c-body .date-time .date .header h1 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+}
+.container .form-box .content .c-body .date-time .date .header button {
+  display: flex;
+}
+.container .form-box .content .c-body .date-time .date .header button:first-child {
+  margin-right: 15px;
+}
+.container .form-box .content .c-body .date-time .date .header button:last-child {
+  margin-left: 15px;
+}
+.container .form-box .content .c-body .date-time .date .body {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-top: 15px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.0509803922);
+}
+.container .form-box .content .c-body .date-time .date .body .weekdays {
+  border-bottom: 1px solid #E3EAF3;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+}
+.container .form-box .content .c-body .date-time .date .body .weekdays .wd {
+  font-size: 13px;
+  font-weight: 400;
+  color: #C8C9CC;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+}
+.container .form-box .content .c-body .date-time .date .body .days {
+  padding: 5px 10px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+}
+.container .form-box .content .c-body .date-time .date .body .days .day {
+  width: calc(100% - 8px);
+  height: 40px;
+  background-color: #ECEFF2;
+  color: #AAACAF;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+}
+.container .form-box .content .c-body .date-time .date .body .days .day.active {
+  color: #111111;
+}
+.container .form-box .content .c-body .date-time .date .body .days .day.done {
+  color: #FFFFFF;
+  background-color: #6C70DC;
+}
+.container .form-box .content .c-body .date-time .time {
+  width: 42%;
+}
+.container .form-box .content .c-body .date-time .time .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0 11px;
+}
+.container .form-box .content .c-body .date-time .time .header h1 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+}
+.container .form-box .content .c-body .date-time .time .body {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-top: 15px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.0509803922);
+}
+.container .form-box .content .c-body .date-time .time .body .select-date {
+  border-bottom: 1px solid #E3EAF3;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6C70DC;
+  padding: 3px 10px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .form-box .content .c-body .date-time .time .body .times {
+  height: 250px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.container .form-box .content .c-body .date-time .time .body .times .r-time {
+  width: calc(100% - 8px);
+  height: 55px;
+  background-color: #ECEFF2;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  color: #111111;
+  display: none;
+}
+.container .form-box .content .c-body .date-time .time .body .times .r-time.active {
+  display: flex;
+  flex-direction: column;
+}
+.container .form-box .content .c-body .date-time .time .body .times .r-time.done {
+  color: #FFFFFF;
+  background-color: #53D56C;
+}
+.container .form-box .content .c-body form {
+  width: 100%;
+  height: 100%;
+}
+.container .form-box .content .c-body form .confirm {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .form-box .content .c-body form .confirm:not(:last-child) {
+  margin-bottom: 20px;
+}
+.container .form-box .content .c-body form .confirm .confirm-data {
+  width: 47%;
+}
+.container .form-box .content .c-body form .confirm .confirm-data h3 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+.container .form-box .content .c-body form .confirm .confirm-data h3 sup {
+  color: #EF264D;
+}
+.container .form-box .content .c-body form .confirm .confirm-data input {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #E3EAF3;
+}
+.container .form-box .content .c-body form .confirm .note-data {
+  width: 100%;
+}
+.container .form-box .content .c-body form .confirm .note-data h3 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+.container .form-box .content .c-body form .confirm .note-data .notes {
+  width: 100%;
+  height: 140px;
+  background-color: #FFFFFF;
+  border: 1px solid #E3EAF3;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .form-box .content .c-body form .confirm .note-data .notes p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #111111;
+}
+.container .form-box .content .c-body form .confirm .note-data .notes p span {
+  font-weight: 400;
+  color: #6C70DC;
+  margin-right: 12px;
+}
+.container .form-box .content .c-body form .confirm .note-data .notes p:last-child span:last-child {
+  font-weight: 500;
+  color: #4FBF65;
+  margin-right: 0;
+}
+.container .form-box .content .c-body form .confirm:nth-child(2) .confirm-data:last-child h3 {
+  margin-bottom: 11px;
+}
+.container .form-box .content .c-footer {
+  height: 12%;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+.container .form-box .content .c-footer span {
+  padding: 9px 14px;
+  border-radius: 2px;
+  background-color: #F4BE6C;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  display: none;
+}
+.container .form-box .content .c-footer span.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOutAnimation 4s forwards;
+}
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.container .form-box .content .c-footer span img {
+  margin-right: 10px;
+}
+.container .form-box .content .c-footer button {
+  border-radius: 2px;
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.container .form-box .content .c-footer button.no-display {
+  visibility: hidden;
+}
+.container .form-box .content .c-footer .btn-back {
+  color: #8F9CA7;
+  background-color: #F7F8FB;
+  border: 1px solid #E3EAF3;
+}
+.container .form-box .content .c-footer .btn-next {
+  display: block;
+  color: #FFFFFF;
+  background-color: #6C70DC;
+}
+.container .form-box .content .c-footer .confirm-btn {
+  display: none;
+  color: #FFFFFF;
+  background-color: #6C70DC;
+}/*# sourceMappingURL=main.css.map */

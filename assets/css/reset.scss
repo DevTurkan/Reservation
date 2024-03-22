@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html,
+body {
+	width: 100%;
+	min-height: 100vh;
+	float: left;
+	font-family: 'Poppins-Regular';
+}
+
+button {
+	border: 0;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}

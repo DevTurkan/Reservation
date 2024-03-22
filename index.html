@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reservation</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+
+            <div class="sidebar">
+                <div class="progress">
+                    <ul class="progress-steps">
+                        <li class="step active">
+                            <span>1</span>
+                            <p>Staff</p>
+                        </li>
+                        <li class="step">
+                            <span>2</span>
+                            <p>Service</p>
+                        </li>
+                        <li class="step">
+                            <span>3</span>
+                            <p>Date & Time</p>
+                        </li>
+                        <li class="step">
+                            <span>4</span>
+                            <p>Confirmation</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="data-1 content-step active">
+                    <div class="c-header">
+                        <h3>Select staff</h3>
+                    </div>
+                    <div class="c-body"></div>
+                </div>
+                <div class="data-2 content-step">
+                    <div class="c-header">
+                        <h3>Select service</h3>
+                    </div>
+                    <div class="c-body"></div>
+                </div>
+                <div class="data-3 content-step">
+                    <div class="c-header">
+                        <h3>Select date & time</h3>
+                    </div>
+                    <div class="c-body">
+                        <div class="date-time">
+                            <div class="date">
+                                <div class="header">
+                                    <button class="prev"> <img src="assets/images/icons/left.svg" /> </button>
+                                    <h1 class="month-year"></h1>
+                                    <button class="next"> <img src="assets/images/icons/right.svg" /> </button>
+                                </div>
+                                <div class="body">
+                                    <div class="weekdays">
+                                        <p class="wd">Sun</p>
+                                        <p class="wd">Mon</p>
+                                        <p class="wd">Tue</p>
+                                        <p class="wd">Wed</p>
+                                        <p class="wd">Thu</p>
+                                        <p class="wd">Fri</p>
+                                        <p class="wd">Sat</p>
+                                    </div>
+                                    <div class="days"></div>
+                                </div>
+                            </div>
+
+                            <div class="time">
+                                <div class="header">
+                                    <h1>Time</h1>
+                                </div>
+                                <div class="body">
+                                    <div class="select-date">Select date</div>
+                                    <div class="times"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="data-4 content-step">
+                    <div class="c-header">
+                        <h3>Confirm detailes</h3>
+                    </div>
+                    <div class="c-body">
+                        <form>
+                            <div class="confirm">
+                                <div class="confirm-data">
+                                    <h3>First name<sup>*</sup></h3>
+                                    <input type="text" id="firstName" />
+                                </div>
+                                <div class="confirm-data">
+                                    <h3>Last name<sup>*</sup></h3>
+                                    <input type="text" id="lastName" />
+                                </div>
+                            </div>
+
+                            <div class="confirm">
+                                <div class="confirm-data">
+                                    <h3>E-mail<sup>*</sup></h3>
+                                    <input type="email" id="email" />
+                                </div>
+                                <div class="confirm-data">
+                                    <h3>Phone</h3>
+                                    <input type="tel" id="phone" />
+                                </div>
+                            </div>
+
+                            <div class="confirm">
+                                <div class="note-data">
+                                    <h3>Note</h3>
+                                    <div class="notes" id="notes"></div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="c-footer">
+                    <button type="button" class="btn-back no-display">BACK</button>
+                    <span><img src="assets/images/icons/error.svg" alt="Error" />
+                        <p class="error-content"></p>
+                    </span>
+                    <button type="button" class="btn-next">NEXT</button>
+                    <button type="button" class="confirm-btn">CONFIRM BOOKING</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="failModal" class="modal">
+            <div class="modal-content">
+                <div class="close"><button type="button"><img src="assets/images/icons/close.svg" /></button></div>
+                <p>Please, fill the all required fields!</p>
+            </div>
+        </div>
+
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <div class="close"><button type="button"><img src="assets/images/icons/close.svg" /></button></div>
+                <p>Confirmation successfully completed!</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
